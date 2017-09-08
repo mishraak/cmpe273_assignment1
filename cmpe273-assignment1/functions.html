@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function changeColor(){
+	var colorArray = ["red", "blue", "green", "yellow", "orange", "black"];    
+    var color = colorArray[(Math.random()*colorArray.length)|0]; 
+	document.getElementById("circle").style.fill=color;
+}
+</script>
+</head>
+<body>
+
+<svg height="100" width="100">
+  <circle id="circle" cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+  Sorry, your browser does not support inline SVG.  
+</svg> 
+</br></br>
+ <input type="Button" onClick=changeColor() value="Change Color">
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function store(){
+	//document.getElementById("fname").innerHTML=document.getElementById("fnamebox").value;
+	if (typeof(Storage) !== "undefined") {		
+		localStorage.setItem("fname",document.getElementById("fnamebox").value);		
+	}
+	else {
+	    document.getElementById("fname1").innerHTML = "Sorry, your browser does not support Web Storage...";
+	}
+}
+
+
+function retrieve(){
+	document.getElementById("fname").innerHTML=localStorage.getItem("fname");
+}
+
+</script>
+<meta charset="UTF-8">
+<title>Local storage</title>
+</head>
+<body>
+	<input type="text" id=fnamebox value="Foobar"></input>
+	<input type="button" onClick="store();" value="Store"></input>
+	<input type="button" onClick="retrieve();" value="Retrieve"></input></br></br>
+	Tha locally stored name is: <label id="fname"></label>	
+</body>
+</html>

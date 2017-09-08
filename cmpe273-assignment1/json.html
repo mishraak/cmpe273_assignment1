@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	var bookJSON;
+	function store(){
+		var name = document.getElementById("name");
+		var author = document.getElementById("author")
+		var price = document.getElementById("price")
+
+		bookJSON = {
+		"name" : name.value,
+		"author":author.value,
+		"price": price.value			
+		};									
+		document.getElementById("jsonObject").innerHTML=JSON.stringify(bookJSON);		
+	}
+	
+</script>
+<meta charset="UTF-8">
+<title>JSON</title>
+</head>
+<body>
+	Enter book details:</br>					
+		Name:<input type="text" id="name" value="Wings of fire"></br>
+		Author:<input type="text" id="author" value="APJ Abdul Kalam"></br>
+		Price:<input type="Number" id="price" value="45"></br>
+		<input type="Submit" value="Submit" onClick="store()">				
+		<label id="jsonObject"></label>
+</body>
+</html>

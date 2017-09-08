@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	function strict(){
+		"use strict";
+		document.getElementById("mode").innerHTML = "Strict Mode on";
+		 try {
+			 	pi=3.14;
+			}
+			catch(err) {
+			    document.getElementById("compiler_message").innerHTML = err.message;
+			}		 
+	}
+	
+	function nonstrict(){
+		document.getElementById("mode").innerHTML = "Regular Mode on";
+		 try {
+			 	pi=3.14;
+			}
+			catch(err) {
+			    document.getElementById("compiler_message").innerHTML = err.message;
+			}
+			
+				document.getElementById("compiler_message").innerHTML = "all good!"; 
+	}
+
+</script>
+<meta charset="UTF-8">
+<title>Strict mode</title>
+</head>
+<body>
+	
+	<input type="button" id="strict" value="Strict mode" onClick="strict()" >
+	<input type="button" id="regular" value="Regular mode" onClick="nonstrict()"></br></br>
+	<label id="mode">The script defines pi=3.14 in the mode of your choice.</label></br></br>
+	<label id="compiler_message">Click one of above buttons to check for strict mode vs regular mode</label>
+</body>
+</html>

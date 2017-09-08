@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script type="text/javascript">
+   function handleIt(phone) {   	  	   
+	   if (/^\(\d\d\d\) \d\d\d-\d\d\d\d$/g.exec(phone)) {		   
+		   document.getElementById("status").innerHTML="valid"
+	   } 
+	   else {
+		   document.getElementById("status").innerHTML="invalid"
+	   }		
+   }
+  </script>
+ </head>
+ <body>
+  <form name="myform" action="javascript:handleIt(phone.value)">  
+   <input type="text" name="phone" id="phone" value="(012) 345-6789"> 
+   <input name="Submit" type="submit" value="Check"/>
+  </form></br>
+  <label id="status">Enter a phone #</label>
+ </body>
+</html>

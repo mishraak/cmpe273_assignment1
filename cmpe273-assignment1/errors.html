@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	function strict(){		
+		document.getElementById("mode").innerHTML = "error message";
+		try {
+				null.foobar();
+			}
+			catch(err) {
+			    document.getElementById("compiler_message").innerHTML = err.message;
+			}		 
+	}	
+</script>
+<meta charset="UTF-8">
+<title>Strict mode</title>
+</head>
+<body>
+	
+	<input type="button" id="strict" value="Strict mode" onClick="strict()" ></br></br>
+	<label id="mode">The script defines a variable on an invalid type.</label></br></br>
+	<label id="compiler_message">Click button to runs the script</label>
+</body>
+</html>

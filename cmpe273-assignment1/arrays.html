@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var fruitArray=[];
+
+function addToArray(elem){	
+	fruitArray.push(elem.value);
+}
+
+function printFruitList(){
+	document.getElementById("list").innerHTML=fruitArray.toString();	
+}
+
+</script>
+
+<meta charset="UTF-8">
+<title>Arrays</title>
+</head>
+<body>	
+	Add To Cart</br></br>
+	<input type="Button" name="one" value="Mango" onClick="addToArray(this);">	
+	<input type="Button" name="two" value="Banana" onClick="addToArray(this);">
+	<input type="Button" name="three" value="Orange" onClick="addToArray(this);">
+	<input type="Button" name="four" value="Guava" onClick="addToArray(this);"></br>
+	<input type="Button" onClick="printFruitList();" value="Print List">
+	<label id="list"></label>	
+</body>
+</html>

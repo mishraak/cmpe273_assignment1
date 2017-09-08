@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	function createBox(){		
+		var box = new Object();
+		box.height = document.getElementById("Height").value;
+		box.length = document.getElementById("Length").value;
+		box.breadth = document.getElementById("Breadth").value;
+		box.color = document.getElementById("Color").value;
+		document.getElementById("Box").innerHTML='height-' + box.height + ', breadth-' + box.breadth + ', length-' + box.length + ', color-' + box.color;
+		//$('.Box').html(color);
+	}
+</script>
+<meta charset="UTF-8">
+<title>Objects</title>
+</head>
+<body>
+	Height   : <input type="Number" id="Height" value=3 /></br>
+	Length   : <input type="Number" id="Length" value=4 /></br>
+	Breadth  : <input type="Number" id="Breadth"/ value=5 ></br>
+	Color    : <input type="Text" id="Color" value="Red" /></br></br>
+	<input type="Button" onclick="createBox()" value="Show Box details"/></br></br>
+	Box details    : <label id="Box" class="Box" ></label>	
+</body>
+</html>
