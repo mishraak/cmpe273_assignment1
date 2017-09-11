@@ -1,28 +1,41 @@
-<!DOCTYPE html>
 <html>
 <head>
-<script>
-
-function search(){
-	alert("search term received as " + document.getElementById("search").value);
-}
-
-</script>
-<meta charset="UTF-8">
-<title>Search</title>
+<title> Form </title>
 </head>
 <body>
-	<div>
-		Search with us:
-		<input type="search" id="search" name="search">
-		<input type="submit" onClick="search();">
-	</div>
-			
-	<div>
-  		Country code: <input type="email" name="email" value="msse@sjsu.edu">
-  		<input type="submit">
-	</div>			
-		
+	<form>
+	Search history:<input type=search results=5 name=s><input type="submit" value= Go >
+	<h2> Please fill below form </h2>
+	Name 	: <input type="text" name="your_name" value="" autocomplete = "on" autofocus><br>
+	Email 	: <input type="email" name="email" value="" required><br>	
+	Password: <input type="password" required><br>
+	Color: <input type="color" name="favcolor" value="#ff0000"><br>
+	Age		: <input type="number" name="age" value="" maxlength = 10><br>
+	Gender 	: <br>
+		<input type="radio" name="gender" value="Male"> Male<br>
+		<input type="radio" name="gender" value="Female"> Female<br>
+		<input type="radio" name="gender" value="Other"> Don't wish to identify<br>
+	Marital status:<br>
+	<input type="checkbox" name="single" value="single"Single> Single<br>
+	<input type="checkbox" name="married" value="married"> Married<br>
+	<input type="checkbox" name="divorced" value="divorced"> Divorced<br>
+	<input type="checkbox" name="gender" value="Other"> Don't wish to identify<br>
 	
+	Select your school : 
+	<select name="school">
+	    <option value="None selected">Please select below</option>
+	    <option value="SJSU">SJSU</option>
+	    <option value="USC">USC</option>
+	    <option value="IITC">IITC</option>
+	    <option value="SCU">SCU</option>
+	</select><br>
+	
+	Rate us  <input type="range" name="stars" min="0" max="5"><br>
+	   
+	Specific note/comments, if any:<br>
+	<textarea name="notes" rows="2" maxlength="100" cols="80"></textarea><br>
+	
+	Reset the form: <input type = reset><br>
+	<input type="submit" value= submit >
+	</form>
 </body>
-</html>

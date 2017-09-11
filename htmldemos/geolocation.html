@@ -1,0 +1,24 @@
+<html>
+	<head>
+	<title>
+		Geo location
+	</title>
+		<script>
+			function getYourLocation(){
+			    if (navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(function(position){
+						cordinates.innerHTML = "Lat: " + position.coords.latitude + 
+					    "<br>Long: " + position.coords.longitude; 
+					});				
+				}else{
+					alert("Your browser does not support location services");
+				}
+			}
+		</script>
+	
+	</head>
+	<body>		
+		<button onclick="getYourLocation()">Find your geo-coordintates</button>
+		<p id="cordinates"></p>
+	</body>
+</html>
